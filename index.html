@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Paws & Polish offers gentle, premium pet grooming, baths, haircuts and spa treatments for your furry best friend.">
+<title>Paws & Polish | Luxury Pet Grooming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--cream: #fbf8f1;
+--white: #ffffff;
+--green: #344d3d;
+--green-light: #e8eee4;
+--orange: #d98b62;
+--text: #30382f;
+--muted: #74796f;
+--line: #e7e3d9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: 'DM Sans', sans-serif;
+background: var(--cream);
+color: var(--text);
+line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+img { width: 100%; display: block; object-fit: cover; }
+button, input, select, textarea { font: inherit; }
+
+.container { width: min(1140px, 90%); margin: auto; }
+
+.announcement {
+background: var(--green);
+color: white;
+text-align: center;
+padding: 9px 15px;
+font-size: 12px;
+letter-spacing: 1px;
+}
+
+header {
+background: var(--cream);
+border-bottom: 1px solid var(--line);
+position: sticky;
+top: 0;
+z-index: 10;
+}
+
+.nav {
+min-height: 82px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 25px;
+}
+
+.logo {
+font-family: 'Playfair Display', serif;
+font-size: 25px;
+font-weight: 700;
+color: var(--green);
+line-height: 1.1;
+}
+
+.logo span {
+display: block;
+font-family: 'DM Sans', sans-serif;
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 3px;
+margin-top: 6px;
+text-align: center;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 27px;
+font-size: 13px;
+font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--orange); }
+
+.btn {
+display: inline-block;
+background: var(--green);
+color: white;
+padding: 13px 23px;
+border: 1px solid var(--green);
+border-radius: 4px;
+font-size: 13px;
+font-weight: 600;
+transition: .25s;
+cursor: pointer;
+}
+
+.btn:hover {
+background: var(--orange);
+border-color: var(--orange);
+transform: translateY(-2px);
+}
+
+.btn-light {
+background: transparent;
+color: var(--green);
+border-color: var(--green);
+}
+
+.hero { padding: 64px 0 75px; }
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 55px;
+align-items: center;
+}
+
+.eyebrow {
+color: var(--orange);
+text-transform: uppercase;
+letter-spacing: 3px;
+font-size: 11px;
+font-weight: 700;
+margin-bottom: 17px;
+}
+
+h1, h2, h3 {
+font-family: 'Playfair Display', serif;
+font-weight: 600;
+line-height: 1.2;
+}
+
+h1 {
+font-size: clamp(42px, 5.5vw, 68px);
+color: var(--green);
+margin-bottom: 22px;
+}
+
+h1 em { color: var(--orange); font-weight: 500; }
+
+.hero-copy {
+color: var(--muted);
+max-width: 470px;
+font-size: 15px;
+margin-bottom: 30px;
+}
+
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.hero-image-wrap { position: relative; }
+
+.hero-image {
+height: 500px;
+border-radius: 48% 48% 5px 5px;
+}
+
+.image-note {
+position: absolute;
+left: -25px;
+bottom: 28px;
+background: white;
+padding: 18px 23px;
+box-shadow: 0 10px 35px #26352518;
+border-radius: 5px;
+max-width: 225px;
+}
+
+.image-note strong { display: block; color: var(--green); font-size: 14px; }
+.image-note span { color: var(--muted); font-size: 12px; }
+
+.trust-strip {
+background: var(--green-light);
+padding: 25px 0;
+}
+
+.trust-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+text-align: center;
+}
+
+.trust-item { font-size: 13px; font-weight: 600; color: var(--green); }
+.trust-item span { display: block; font-size: 11px; color: var(--muted); font-weight: 400; }
+
+section { padding: 85px 0; }
+
+.section-heading { text-align: center; max-width: 600px; margin: 0 auto 42px; }
+
+.section-heading h2 {
+font-size: clamp(32px, 4vw, 44px);
+color: var(--green);
+margin-bottom: 13px;
+}
+
+.section-heading p { color: var(--muted); font-size: 14px; }
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 23px;
+}
+
+.service-card {
+background: white;
+padding: 30px 27px;
+border: 1px solid var(--line);
+border-radius: 5px;
+transition: .25s;
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 30px #2635250c;
+}
+
+.service-icon { font-size: 28px; margin-bottom: 17px; }
+
+.service-card h3 { color: var(--green); font-size: 22px; margin-bottom: 10px; }
+.service-card p { color: var(--muted); font-size: 13px; min-height: 66px; }
+.price { display: block; color: var(--orange); font-weight: 700; margin-top: 18px; font-size: 14px; }
+
+.about { background: #f1eee5; }
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+
+.about-image { height: 460px; border-radius: 5px; }
+
+.about-copy h2 {
+font-size: clamp(32px, 4vw, 44px);
+color: var(--green);
+margin-bottom: 20px;
+}
+
+.about-copy p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+
+.check-list { list-style: none; margin: 22px 0 28px; }
+.check-list li { margin-bottom: 10px; font-size: 13px; }
+.check-list li::before { content: "✓"; color: var(--orange); font-weight: 700; margin-right: 10px; }
+
+.gallery-grid {
+display: grid;
+grid-template-columns: 1.2fr 1fr 1fr;
+gap: 18px;
+}
+
+.gallery-grid img { height: 300px; border-radius: 5px; }
+
+.booking { background: var(--green); color: white; }
+
+.booking-grid {
+display: grid;
+grid-template-columns: .85fr 1.15fr;
+gap: 60px;
+align-items: start;
+}
+
+.booking-copy h2 { font-size: clamp(34px, 4vw, 47px); margin-bottom: 18px; }
+.booking-copy p { color: #e1e8df; font-size: 14px; margin-bottom: 20px; }
+.contact-detail { margin-top: 18px; font-size: 13px; color: #e1e8df; }
+.contact-detail strong { display: block; color: white; margin-bottom: 3px; }
+
+.booking-form {
+background: white;
+color: var(--text);
+padding: 32px;
+border-radius: 5px;
+}
+
+.booking-form h3 { color: var(--green); font-size: 25px; margin-bottom: 22px; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 12px; font-weight: 600; }
+
+.field input, .field select, .field textarea {
+width: 100%;
+border: 1px solid var(--line);
+background: #fcfbf8;
+padding: 12px;
+border-radius: 3px;
+outline: none;
+color: var(--text);
+font-size: 13px;
+}
+
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--orange); }
+.field textarea { min-height: 90px; resize: vertical; }
+.booking-form .btn { width: 100%; }
+.form-note { font-size: 11px; color: var(--muted); margin-top: 12px; }
+
+.faq-list { max-width: 760px; margin: auto; }
+
+details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+summary { cursor: pointer; color: var(--green); font-weight: 600; font-size: 14px; }
+details p { color: var(--muted); font-size: 13px; padding-top: 12px; }
+
+.final-cta { background: var(--green-light); text-align: center; padding: 65px 20px; }
+.final-cta h2 { color: var(--green); font-size: clamp(30px, 4vw, 42px); margin-bottom: 14px; }
+.final-cta p { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+
+footer { background: #263b2d; color: white; padding: 35px 0; }
+.footer-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+footer p { color: #d2dbd1; font-size: 12px; }
+.footer-links { display: flex; gap: 20px; font-size: 12px; }
+
+@media (max-width: 800px) {
+.nav { padding: 17px 0; flex-wrap: wrap; }
+.nav-links { order: 3; width: 100%; justify-content: center; gap: 17px; flex-wrap: wrap; }
+.nav > .btn { padding: 10px 13px; }
+.hero { padding-top: 40px; }
+.hero-grid, .about-grid, .booking-grid { grid-template-columns: 1fr; gap: 35px; }
+.hero-image { height: 390px; }
+.image-note { left: 10px; }
+.services-grid { grid-template-columns: repeat(2, 1fr); }
+.about-image { height: 360px; }
+.booking-grid { gap: 35px; }
+}
+
+@media (max-width: 520px) {
+.container { width: 91%; }
+.announcement { font-size: 10px; }
+.nav-links { gap: 12px; font-size: 11px; }
+.logo { font-size: 21px; }
+.hero-image { height: 320px; }
+section { padding: 60px 0; }
+.trust-grid { grid-template-columns: 1fr; gap: 17px; }
+.services-grid { grid-template-columns: 1fr; }
+.service-card p { min-height: auto; }
+.gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+.gallery-grid img { height: 180px; }
+.gallery-grid img:first-child { grid-column: 1 / -1; height: 230px; }
+.booking-form { padding: 22px 17px; }
+.form-grid { grid-template-columns: 1fr; gap: 0; }
+.field.full { grid-column: auto; }
+.footer-row { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">
+A LITTLE EXTRA LOVE FOR YOUR BEST FRIEND — BOOK A GROOMING SESSION
+</div>
+
+<header>
+<div class="container nav">
+<a href="#home" class="logo">Paws & Polish<span>Luxury Pet Grooming</span></a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">Our Story</a>
+<a href="#gallery">Gallery</a>
+<a href="#faq">FAQs</a>
+</nav>
+<a class="btn" href="#booking">Book a Visit</a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<p class="eyebrow">Where good dogs get pampered</p>
+<h1>Fresh cuts.<br>Happy paws.<br><em>All the love.</em></h1>
+<p class="hero-copy">
+More than a bath and a haircut. We create a calm, caring grooming
+experience that leaves your furry family member looking fabulous
+and feeling their very best.
+</p>
+<div class="hero-buttons">
+<a href="#booking" class="btn">Book an Appointment</a>
+<a href="#services" class="btn btn-light">Explore Services</a>
+</div>
+</div>
+<div class="hero-image-wrap">
+<img class="hero-image"
+src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1000&q=85"
+alt="Happy dog enjoying a grooming session">
+<div class="image-note">
+<strong>Gentle care, every time ♡</strong>
+<span>Your pet's comfort comes first.</span>
+</div>
+</div>
+</div>
+</section>
+
+<div class="trust-strip">
+<div class="container trust-grid">
+<div class="trust-item">♡ Gentle, Pet-First Care<span>Every pet deserves patience</span></div>
+<div class="trust-item">✦ Thoughtful Grooming<span>Careful attention to every detail</span></div>
+<div class="trust-item">❀ A Clean, Calm Space<span>Comfort from start to finish</span></div>
+</div>
+</div>
+
+<section id="services">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">Our grooming menu</p>
+<h2>A little pampering goes a long way.</h2>
+<p>From quick freshen-ups to a full head-to-paw makeover, there's a treatment for every coat and personality.</p>
+</div>
+
+<div class="services-grid">
+<article class="service-card">
+<div class="service-icon">🛁</div>
+<h3>The Freshen Up</h3>
+<p>A refreshing bath, gentle blow-dry, brushing and a spritz to leave your pet feeling clean and cuddly.</p>
+<span class="price">From $35</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">✂️</div>
+<h3>The Signature Cut</h3>
+<p>A breed-appropriate or customized haircut, finished with a bath, drying and a careful brush-out.</p>
+<span class="price">From $60</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🐾</div>
+<h3>Pawdicure</h3>
+<p>Nail trimming and a tidy-up for happier paws, with a gentle approach to help your pet feel at ease.</p>
+<span class="price">From $15</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">🌿</div>
+<h3>De-Shedding Treatment</h3>
+<p>A coat-focused treatment designed to loosen excess fur and help keep your pet's coat in better shape.</p>
+<span class="price">From $45</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">✨</div>
+<h3>The Full Spa Day</h3>
+<p>A premium grooming experience combining a bath, haircut, nail care, brushing and finishing touches.</p>
+<span class="price">From $85</span>
+</article>
+
+<article class="service-card">
+<div class="service-icon">♡</div>
+<h3>Puppy's First Visit</h3>
+<p>A gentle introduction to grooming with extra patience, positive attention and plenty of reassurance.</p>
+<span class="price">From $30</span>
+</article>
+</div>
+<p style="text-align:center;color:var(--muted);font-size:11px;margin-top:25px;">
+Sample prices for this website demo. Final pricing depends on pet size, coat condition and service needs.
+</p>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-grid">
+<div>
+<img class="about-image"
+src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1000&q=85"
+alt="A dog receiving attentive grooming care" loading="lazy">
+</div>
+<div class="about-copy">
+<p class="eyebrow">A little about us</p>
+<h2>Good grooming starts with a whole lot of love.</h2>
+<p>
+At Paws & Polish, we believe grooming should be a positive experience,
+not something your pet has to dread. Our approach puts comfort,
+patience and thoughtful care at the heart of every visit.
+</p>
+<p>
+Whether your companion needs a simple bath or a full style refresh,
+our goal is the same: help them leave feeling comfortable, clean and loved.
+</p>
+<ul class="check-list">
+<li>Care tailored to your pet's coat and needs</li>
+<li>Gentle handling and patient attention</li>
+<li>Clear communication with pet parents</li>
+<li>Fresh, tidy results and happy tails</li>
+</ul>
+<a class="btn" href="#booking">Let's Meet Your Best Friend</a>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">The cute corner</p>
+<h2>Good hair days look good on everyone.</h2>
+<p>A peek into the happy, fluffy world of Paws & Polish.</p>
+</div>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85"
+alt="Two happy dogs together" loading="lazy">
+<img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=700&q=85"
+alt="Adorable dog portrait" loading="lazy">
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=85"
+alt="Golden dog enjoying the day" loading="lazy">
+</div>
+</div>
+</section>
+
+<section class="booking" id="booking">
+<div class="container booking-grid">
+<div class="booking-copy">
+<p class="eyebrow" style="color:#f0b18e;">Your pet's next best day</p>
+<h2>Let's get those tails wagging.</h2>
+<p>
+Ready for a fresh, fluffy new look? Send us an appointment request.
+Tell us a little about your pet and the service you're interested in.
+</p>
+<div class="contact-detail">
+<strong>✉ Email</strong>
+hello@pawsandpolish.example
+</div>
+<div class="contact-detail">
+<strong>◷ Hours</strong>
+Monday–Saturday · 9 AM–6 PM
+</div>
+<div class="contact-detail">
+<strong>♡ Our promise</strong>
+Patient care and a comfortable experience for every pet.
+</div>
+</div>
+
+<form class="booking-form" id="bookingForm">
+<h3>Request an Appointment</h3>
+<div class="form-grid">
+<div class="field">
+<label for="owner">Your Name *</label>
+<input id="owner" name="owner" type="text" placeholder="Your full name" required>
+</div>
+<div class="field">
+<label for="email">Your Email *</label>
+<input id="email" name="email" type="email" placeholder="you@example.com" required>
+</div>
+<div class="field">
+<label for="pet">Pet's Name *</label>
+<input id="pet" name="pet" type="text" placeholder="Your pet's name" required>
+</div>
+<div class="field">
+<label for="type">Pet Type</label>
+<select id="type" name="type">
+<option value="Dog">Dog</option>
+<option value="Cat">Cat</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="field">
+<label for="service">Preferred Service *</label>
+<select id="service" name="service" required>
+<option value="">Choose a service</option>
+<option>The Freshen Up</option>
+<option>The Signature Cut</option>
+<option>Pawdicure</option>
+<option>De-Shedding Treatment</option>
+<option>The Full Spa Day</option>
+<option>Puppy's First Visit</option>
+</select>
+</div>
+<div class="field">
+<label for="date">Preferred Date</label>
+<input id="date" name="date" type="date">
+</div>
+<div class="field full">
+<label for="notes">Anything We Should Know?</label>
+<textarea id="notes" name="notes" placeholder="Pet size, breed, coat needs or questions..."></textarea>
+</div>
+</div>
+<button class="btn" type="submit">Prepare Appointment Request</button>
+<p class="form-note">Demo form: submitting opens your email app with the request prepared. It does not book an appointment automatically.</p>
+<p id="formStatus" role="status" style="font-size:12px;margin-top:10px;"></p>
+</form>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">Good to know</p>
+<h2>A few frequently asked questions.</h2>
+<p>Everything you need to know before your pet's first visit.</p>
+</div>
+
+<div class="faq-list">
+<details>
+<summary>How long does a grooming appointment take?</summary>
+<p>Timing depends on your pet's size, coat, temperament and selected service. We'll discuss an estimated timeframe when confirming your appointment.</p>
+</details>
+<details>
+<summary>What should I bring to the appointment?</summary>
+<p>Bring your pet on a secure leash or in an appropriate carrier. Please share any relevant grooming preferences, sensitivities or special care instructions.</p>
+</details>
+<details>
+<summary>Can I request a particular haircut?</summary>
+<p>Absolutely. You can describe the look you want or bring a reference photo. We'll discuss what is suitable for your pet's coat and comfort.</p>
+</details>
+<details>
+<summary>Do you groom puppies?</summary>
+<p>Yes, puppy introductions can help young pets become more comfortable with grooming. The appropriate service depends on their age and individual needs.</p>
+</details>
+<details>
+<summary>Are the prices fixed?</summary>
+<p>The prices shown are starting prices for this website demonstration. Actual grooming prices may vary based on size, coat condition, temperament and service requirements.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+<p class="eyebrow">They deserve the good stuff</p>
+<h2>Because they're family, too.</h2>
+<p>Give your furry best friend a little extra love with a fresh grooming experience.</p>
+<a class="btn" href="#booking">Request a Visit</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-row">
+<a href="#home" class="logo" style="color:white;">Paws & Polish<span>Luxury Pet Grooming</span></a>
+<p>© <span id="year"></span> Paws & Polish. Portfolio demo website.</p>
+<div class="footer-links">
+<a href="#services">Services</a>
+<a href="#booking">Appointments</a>
+<a href="#faq">FAQs</a>
+</div>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("bookingForm").addEventListener("submit", function (event) {
+event.preventDefault();
+
+const form = event.currentTarget;
+const data = new FormData(form);
+const subject = encodeURIComponent("Pet Grooming Appointment Request");
+const body = encodeURIComponent(
+"Hello Paws & Polish,\n\nI'd like to request a grooming appointment.\n\n" +
+"Owner: " + data.get("owner") + "\n" +
+"Email: " + data.get("email") + "\n" +
+"Pet: " + data.get("pet") + "\n" +
+"Pet type: " + data.get("type") + "\n" +
+"Service: " + data.get("service") + "\n" +
+"Preferred date: " + (data.get("date") || "Flexible") + "\n" +
+"Additional details: " + (data.get("notes") || "None") + "\n\n" +
+"Please let me know what appointments are available."
+);
+
+document.getElementById("formStatus").textContent =
+"Your email app should open with the request. Please review and send the email to complete your request.";
+
+window.location.href =
+"mailto:hello@pawsandpolish.example?subject=" + subject + "&body=" + body;
+});
+</script>
+</body>
+</html>
